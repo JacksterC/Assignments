@@ -4,7 +4,7 @@ using System;
 using System.Threading;
 using UnityEngine;
 
-public class Assignment1 : ProcessingLite.GP21
+public class Jack_Clomen_prg_fun : ProcessingLite.GP21
 {
     // Start is called before the first frame update
     void Start()
