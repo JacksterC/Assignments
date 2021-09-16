@@ -42,7 +42,7 @@ public class Assignment1 : ProcessingLite.GP21
 			LetterK(fx);
 				
 			
-			Thread.Sleep(20);
+			//Thread.Sleep(20);
 			//for (int counter = 0; counter <= 1000000; counter++)
 			//{
 			//}
