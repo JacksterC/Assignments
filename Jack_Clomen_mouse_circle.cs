@@ -15,11 +15,6 @@ public class Jack_Clomen_mouse_circle : ProcessingLite.GP21
 		float magnit;
 		Vector2 spd;
 		
-		int flsf1 = 1;
-		int flsf2 = 1;
-		int flsf3 = 1;
-		int flsf4 = 1;
-		
 		float tmpMX = 1;
 		float tmpMY = 1;
 		
@@ -86,10 +81,6 @@ public class Jack_Clomen_mouse_circle : ProcessingLite.GP21
 			Stroke(255, 0, 255);
 			StrokeWeight(1);
 			Line(tmpV2.x, tmpV2.y, MouseX, MouseY);
-			flsf1 = 1;
-			flsf2 = 1;
-			flsf3 = 1;
-			flsf4 = 1;
 			
 			Stroke(255, 51, 0);
 			Circle(cP.x, cP.y, diam);
@@ -122,45 +113,13 @@ public class Jack_Clomen_mouse_circle : ProcessingLite.GP21
 			Circle(cP.x, cP.y, diam);
 			
 			
-			if(cP.x - diam/2 <= 0)
+			if(cP.x - diam/2 <= 0 || cP.x + diam/2 >= Width)
 			{
-				if(flsf1 == 1)
-				{
-					flsf1 = 2;
-					flsf2 = 1;
-					
-					spd.x = -spd.x;
-				}
+				spd.x = -spd.x;
 			}
-			if(cP.x + diam/2 >= 19.5f)
+			if(cP.y - diam/2 <= 0 || cP.y + diam/2 >= Height)
 			{
-				if(flsf2 == 1)
-				{
-					flsf2 =2;
-					flsf1 =1;
-					
-					spd.x = -spd.x;
-				}
-			}
-			if(cP.y - diam/2 <= 0)
-			{
-				if(flsf3 == 1)
-				{
-					flsf3 = 2;
-					flsf4 = 1;
-					
-					spd.y = -spd.y;
-				}
-			}
-			if(cP.y + diam/2 >= 10)
-			{
-				if(flsf4 == 1)
-				{
-					flsf4 = 2;
-					flsf3 = 1;
-					
-					spd.y = -spd.y;
-				}
+				spd.y = -spd.y;
 			}
 		}
     }
