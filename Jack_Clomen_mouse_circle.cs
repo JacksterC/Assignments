@@ -20,8 +20,6 @@ public class Jack_Clomen_mouse_circle : ProcessingLite.GP21
 		int flsf3 = 1;
 		int flsf4 = 1;
 		
-		//public Transform target;
-		//Camera cam;
 
 	
     // Start is called before the first frame update
@@ -39,7 +37,6 @@ public class Jack_Clomen_mouse_circle : ProcessingLite.GP21
 		tmpV.x = 0; tmpV.y = 0;
 		direct.x = 0; direct.y = 0;
 		
-		//cam = GetComponent<Camera>();
     }
 
     // Update is called once per frame
@@ -103,15 +100,13 @@ public class Jack_Clomen_mouse_circle : ProcessingLite.GP21
 		else
 		{
 			Stroke(0, 0, 0);
-			Circle(cP.x, cP.y, diam);
+			Circle(cP.x, cP.y, diam + 0.2f);
 			
 			cP = cP - spd;
 		
 			Stroke(255, 255, 255);
 			Circle(cP.x, cP.y, diam);
 			
-			
-			//Vector3 screenPos = cam.WorldToScreenPoint(target.position);
 			
 			if(cP.x - diam/2 <= 0)
 			{
