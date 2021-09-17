@@ -20,6 +20,9 @@ public class Jack_Clomen_mouse_circle : ProcessingLite.GP21
 		int flsf3 = 1;
 		int flsf4 = 1;
 		
+		float tmpMX = 1;
+		float tmpMY = 1;
+		
 
 	
     // Start is called before the first frame update
@@ -37,6 +40,8 @@ public class Jack_Clomen_mouse_circle : ProcessingLite.GP21
 		tmpV.x = 0; tmpV.y = 0;
 		direct.x = 0; direct.y = 0;
 		
+
+		
     }
 
     // Update is called once per frame
@@ -48,7 +53,7 @@ public class Jack_Clomen_mouse_circle : ProcessingLite.GP21
 		{
 			Stroke(0, 0, 0);
 			
-			Circle(cP.x, cP.y, diam);
+			Circle(cP.x, cP.y, diam+1);
 			
 			
 			Stroke(255, 255, 255);
@@ -71,14 +76,23 @@ public class Jack_Clomen_mouse_circle : ProcessingLite.GP21
 		}
 		if (Input.GetMouseButton(0))
 		{			
-			Stroke(255, 0, 255);
-			
+			Stroke(0, 0, 0);
+			StrokeWeight(2);
+			Line(tmpV2.x, tmpV2.y, tmpMX, tmpMY);
 			tmpV2 = cP;
+			tmpMX = MouseX;
+			tmpMY = MouseY;
+			
+			Stroke(255, 0, 255);
+			StrokeWeight(1);
 			Line(tmpV2.x, tmpV2.y, MouseX, MouseY);
 			flsf1 = 1;
 			flsf2 = 1;
 			flsf3 = 1;
 			flsf4 = 1;
+			
+			Stroke(255, 51, 0);
+			Circle(cP.x, cP.y, diam);
 		}
 		if (Input.GetMouseButtonUp(0))
 		{
