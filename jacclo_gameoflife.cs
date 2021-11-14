@@ -21,7 +21,7 @@ public class jacclo_gameoflife : ProcessingLite.GP21
     // Start is called before the first frame update
     void Start()
     {
-	   Background(0);
+		Background(0);
 	   
 	   	//Frame rate settings
 		QualitySettings.vSyncCount = 0;  // VSync must be disabled
@@ -29,7 +29,6 @@ public class jacclo_gameoflife : ProcessingLite.GP21
 		
 		size = 0.2f;
 		
-		// TODO - Only works up to ~10 percent
 		initPercentPopulation = 20;
 		
 		float percentPop = initPercentPopulation * 0.01f;
@@ -168,8 +167,7 @@ public class jacclo_gameoflife : ProcessingLite.GP21
 				neighbours = 0;
 			}
 		}
-	//if (neighbours > 10000)
-	//{		
+	
 		squareCounter = 0;
 		
 		float x = 0;
@@ -207,50 +205,6 @@ public class jacclo_gameoflife : ProcessingLite.GP21
 			}
 			
 		}
-    }
-	//}
+	}
 }
 
-//class Checkcellsandupdate : ProcessingLite.GP21
-//{
-//	public Vector2 position;
-//	public bool[,] positionStatus = new bool[Height/cellsize, ;
-//	public int size;
-//	public int initPopulation;
-	
-//	public Checkcellsandupdate()
-//	{
-		
-//	}
-	
-	
-	//void Initialize(int size, int initPopulation)
-	//{
-	//	
-	//}
-	
-
-//		for (position.x = 0; (int)(position.x / size) <= (int)(Width / size); position.x++)
-//		{
-//			for (position.y = 0; (int)(position.y / size) <= (int)(Height / size); position.y++)
-//			{
-//				
-//			}
-//		}
-//	}
-//	void CheckAndUpdate()
-//	{
-//		For (position.x = 0; (int)(position.x / size) <= (int)(Width / size); position.x++)
-//		{
-//			For (position.y = 0; (int)(position.y / size) <= (int)(Height / size); position.y++)
-//			{
-				
-//			}
-//		}
-//	}
-//	void DrawCell(float x, float y, float size2)
-//	{
-//		size2 = size2 / 10;
-//		Square(x, y, size2);
-//	}
-//}
